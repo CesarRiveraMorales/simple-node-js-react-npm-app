@@ -29,6 +29,8 @@ pipeline {
     }
     stage('Build/Deploy'){
       steps {
+        sh 'git config --global user.name cesariveramorales',
+        sh 'git config --global user.email cesar.rivera@usach.cl'
         sh 'npm run deploy'
       }
     }
