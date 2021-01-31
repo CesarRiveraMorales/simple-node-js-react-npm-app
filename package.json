@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://CesarRiveraMorales.github.io/simple-node-js-react-npm-app",
+  "homepage": "https://cesarriveramorales.github.io/simple-node-js-react-npm-app",
   "private": true,
   "dependencies": {
     "eslint-plugin-react": "^7.22.0",
