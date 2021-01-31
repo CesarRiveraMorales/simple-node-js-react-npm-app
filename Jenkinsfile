@@ -29,9 +29,11 @@ pipeline {
     }
     stage('Build/Deploy'){
       steps {
-        sh 'deliver.sh'
+        sh 'npm run build'
+        sh 'npm start & sleep 1'
+        sh 'echo $! > .pidfile'
         input message: '¿Has terminado de usar la página? (Click "Proceder" para continuar)'
-        sh 'kill.sh'
+        sh 'kill $(cat .pidfile)'
       }
     }
   }
