@@ -33,7 +33,7 @@ pipeline {
         sh 'npm start & sleep 1'
         sh 'echo $! > .pidfile'
         input message: '¿Has terminado de usar la página? (Click "Proceder" para continuar)'
-        sh 'kill $(cat .pidfile)'
+        sh 'kill -1'
       }
     }
   }
