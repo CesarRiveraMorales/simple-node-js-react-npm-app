@@ -31,9 +31,8 @@ pipeline {
       steps {
         sh 'npm run build'
         sh 'npm start & sleep 1'
-        sh 'echo $! > .pidfile'
         input message: '¿Has terminado de usar la página? (Click "Proceed" para continuar)'
-        sh 'kill -9 $(cat .pidfile)'
+        sh 'kill -9 -1'
       }
     }
   }
