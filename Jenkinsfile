@@ -30,9 +30,6 @@ pipeline {
     stage('Build/Deploy'){
       steps {
         sh 'npm run build'
-        sh 'npm start & sleep 1'
-        input message: '¿Has terminado de usar la página? (Click "Proceed" para continuar)'
-        sh 'kill -9 -1'
       }
     }
   }
