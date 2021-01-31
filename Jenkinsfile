@@ -29,9 +29,9 @@ pipeline {
     }
     stage('Build/Deploy'){
       steps {
-        sh './scripts/deliver.sh'
+        sh 'deliver.sh'
         input message: '¿Has terminado de usar la página? (Click "Proceder" para continuar)'
-        sh './scripts/kill.sh'
+        sh 'kill.sh'
       }
     }
   }
