@@ -29,9 +29,6 @@ pipeline {
     }
     stage('Build/Deploy'){
       steps {
-        sh 'git config --global user.name CesarRiveraMorales'
-        sh 'git config --global user.email cesar.rivera@usach.cl'
-        sh 'rm -rf node_modules/gh-pages/.cache'
         sh 'npm run deploy'
       }
     }
